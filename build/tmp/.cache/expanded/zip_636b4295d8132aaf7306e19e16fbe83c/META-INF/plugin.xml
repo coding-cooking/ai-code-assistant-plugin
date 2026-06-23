@@ -1,0 +1,14 @@
+<idea-plugin>
+  <idea-version since-build="261.25134" />
+  <version>1.0.0</version>
+  <id>com.example.hello-plugin</id>
+  <name>Hello Plugin</name>
+  <vendor>YourName</vendor>
+  <description><![CDATA[My first IntelliJ plugin]]></description>
+  <actions>
+    <!-- 在 Tools 菜单下添加一个 Hello World 按钮 -->
+    <action id="HelloAction" class="com.example.helloplugin.HelloAction" text="Hello World" description="Show a hello world dialog">
+      <add-to-group group-id="ToolsMenu" anchor="last" />
+    </action>
+  </actions>
+</idea-plugin>

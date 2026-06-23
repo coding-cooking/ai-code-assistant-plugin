@@ -1,0 +1,68 @@
+<idea-plugin>
+    <id>com.felixz.ai-code-assistant</id>
+    <name>AI Code Assistant</name>
+    <vendor url="https://github.com/felixz/ai-code-assistant">felixz</vendor>
+
+    <description><![CDATA[
+        <h2>AI Code Assistant</h2>
+        <p>Select any code, right-click, and get an instant AI explanation — without leaving your IDE.</p>
+
+        <h3>Features</h3>
+        <ul>
+            <li>🔍 <b>Explain code</b>: Select code → right-click → Ask AI</li>
+            <li>🔄 <b>Switch providers</b> anytime from the right-click menu</li>
+            <li>🔑 <b>Your API key stays local</b> — never uploaded or shared</li>
+        </ul>
+
+        <h3>Supported Providers</h3>
+        <ul>
+            <li>OpenAI (ChatGPT) — gpt-4o, gpt-4o-mini, gpt-3.5-turbo</li>
+            <li>Google (Gemini) — gemini-2.0-flash, gemini-1.5-pro</li>
+            <li>Anthropic (Claude) — claude-3-5-sonnet, claude-3-haiku</li>
+            <li>DeepSeek — deepseek-chat, deepseek-reasoner</li>
+            <li>Moonshot (Kimi) — moonshot-v1 series</li>
+            <li>ZhipuAI (GLM) — glm-4-flash, glm-4-plus</li>
+            <li>Custom — any OpenAI-compatible endpoint</li>
+        </ul>
+
+        <h3>Getting Started</h3>
+        <p>After installation, a setup wizard will guide you to choose a provider and enter your API key.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <b>1.0.0</b>
+        <ul>
+            <li>Initial release</li>
+            <li>Support for 6 AI providers + custom endpoints</li>
+            <li>Onboarding wizard on first install</li>
+        </ul>
+    ]]></change-notes>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService
+            serviceImplementation="com.example.helloplugin.AiSettings"/>
+
+        <applicationConfigurable
+            parentId="tools"
+            instance="com.example.helloplugin.AiSettingsConfigurable"
+            id="com.felixz.aiassistant.AiSettingsConfigurable"
+            displayName="AI Code Assistant"/>
+
+        <projectActivity
+            implementation="com.example.helloplugin.PostInstallActivity"/>
+    </extensions>
+
+    <actions>
+        <group id="AiAssistantGroup">
+            <action id="AskAiAction"
+                    class="com.example.helloplugin.AskAiAction"
+                    text="Ask AI"
+                    description="Ask AI to explain the selected code"/>
+            <action id="SwitchProviderAction"
+                    class="com.example.helloplugin.SwitchProviderAction"
+                    text="Switch AI Provider…"
+                    description="Change AI provider or API key"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </group>
+    </actions>
+</idea-plugin>

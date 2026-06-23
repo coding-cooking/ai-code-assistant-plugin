@@ -1,0 +1,16 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="EditorPaste">
+      <i c="2" l="1782191896561" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="1" l="1782184261538" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="2" l="1782184230544" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.impl.MoreActionGroup">
+      <i c="1" l="1782184267730" />
+    </e>
+  </component>
+</application>

@@ -1,0 +1,8 @@
+<application>
+  <component name="AiAssistantSettings">
+    <option name="apiKey" value="de0f6c70afb044aeacc7599c6b2c05ee.LmDcIC3cRNaqUlrV" />
+    <option name="hasCompletedOnboarding" value="true" />
+    <option name="model" value="glm-4-flash" />
+    <option name="providerName" value="ZHIPU" />
+  </component>
+</application>
