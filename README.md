@@ -68,7 +68,7 @@ To switch providers: right-click → **Switch AI Provider…**
 
 | Setup Wizard | Right-click Menu | Result Dialog |
 |---|---|---|
-| ![Setup](docs/screenshot-setup.png) | ![Menu](docs/screenshot-menu.png) | ![Result](docs/screenshot-result.png) |
+| ![Setup](docs/screenshot-setup-1.png，screenshot-setup-2.png) | ![Menu](docs/screenshot-menu.png) | ![Result](docs/screenshot-result.png) |
 
 ---
 
